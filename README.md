@@ -19,3 +19,33 @@ docker exec -t laravel_php php artisan migrate
 
 Acessar o projeto localmente pelo link: http://localhost:80
 
+### Envio do arquivo para processamento
+
+Para enviar o arquivo para processamento, é necessario enviar via post para a rota /api/billet, através do parâmetro file o arquivo.
+
+Se tudo estiver ok com a requisição é esperado receber a seguinte mensagem em JSON
+
+```json
+{
+    "message": "Billets successfully upload"
+}
+```
+Após isso o sistema ira começar o processamento do arquivo através de uma fila
+
+
+### Geração e envio dos boletos
+
+Para gerar e enviar os boletos é necessario rodar o seguinte comando
+
+```console
+docker exec laravel_php php artisan app:send-billets
+```
+
+
+## Testes
+
+Para rodar os testes é necessario rodar o seguinte comando
+
+```console
+docker exec laravel_php php artisan test
+```
