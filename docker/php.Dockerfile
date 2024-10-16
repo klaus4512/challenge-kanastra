@@ -1,6 +1,7 @@
 FROM php:8.3-fpm-alpine
 
 ADD ./docker/php/www.conf /usr/local/etc/php-fpm.d/www.conf
+COPY ./docker/php/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
 RUN addgroup -g 1000 laravel && adduser -G laravel -g laravel -s /bin/sh -D laravel
 
