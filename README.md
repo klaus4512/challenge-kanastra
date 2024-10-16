@@ -49,3 +49,12 @@ Para rodar os testes é necessario rodar o seguinte comando
 ```console
 docker exec laravel_php php artisan test
 ```
+
+
+## Logs para exemplo de envios
+
+Os logs para exemplo de envios ficam localizados dentro da pasta storage/logs
+
+O arquivo billetPDF representa a geração do boleto em PDF
+
+O arquivo mail repreenta o envio do email
