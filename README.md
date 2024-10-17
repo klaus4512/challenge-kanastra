@@ -4,13 +4,27 @@ Implementação do desafio tecnico proposto pela Kanastra.
 
 ## Como rodar o projeto
 
-Rodar o seguinte comando para iniciar os containers Docker
+- Copiar o arquivo .env.example para .env
+```console
+cp .env.example .env
+```
+
+- Rodar o seguinte comando para instalar os containers Docker
 ```console
 docker compose build
+```
+
+- Rodar o seguinte comando para instalar as dependencias do projeto
+```console
+docker compose run --rm composer install 
+```
+
+- Para iniciar os containers, rodar o seguinte comando
+```console
 docker compose up -d
 ```
 
-E o seguinte comando para rodar as migrations
+- E o seguinte comando para rodar as migrations
 ```console
 docker exec -t laravel_php php artisan migrate
 ```

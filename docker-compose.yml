@@ -36,7 +36,7 @@ services:
             MYSQL_ROOT_PASSWORD: secret
 
     composer:
-        image: composer:latest
+        image: composer:2.8.1
         container_name: laravel_composer
         volumes:
             - ./:/var/www/html
