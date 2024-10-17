@@ -24,9 +24,14 @@ docker compose run --rm composer install
 docker compose up -d
 ```
 
-- E o seguinte comando para rodar as migrations
+- O seguinte comando para rodar as migrations
 ```console
 docker exec -t laravel_php php artisan migrate
+```
+
+- E por fim rodar o seguinte comando para gerar a chave do projeto
+```console
+sudo docker exec -t laravel_php php artisan key:generate
 ```
 
 ## Acessar o projeto
